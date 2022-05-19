@@ -6,92 +6,105 @@
     <title>Tlacháč</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico"> <!--Favicon-->
 
-<!--    bootstrap-->
+    <!--    bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
 
 <!--Navigačné menu-->
-    <ul class="nav nav-pills">
-        <li class="nav-item">
-            <a class="nav-link active" href="index.html">Hlavna stranka</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="podStranka1.html">Cennik</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="podStranka2.html">Kontakt</a>
-        </li>
-    </ul>
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a class="nav-link active" href="index.html">Hlavna stranka</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="podStranka1.html">Cennik</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="podStranka2.html">Kontakt</a>
+    </li>
+</ul>
 
-<h1>Ubytovanie - Terchová</h1>
-<h2>Chalupa ADEN</h2>
+<!--Kontajner-->
+<div class="container-fluid">
+    <h1>Ubytovanie - Terchová</h1>
+    <h2>Chalupa ADEN</h2>
+    <p>Ubytujte sa v roddinej chalupe v srdci Terchovej</p>
 
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="images/img.png" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title">Chalupa ADEN</h5>
-        <p class="card-text">
-        <ol>
-            <li>ubytovanie v chalupe Aden v obci Terchová</li>
-            <li>ubytovanie pre jednu skupinu osôb (min.8 - max.15 osôb)</li>
-            <li>päť izieb, kuchyňa, dve kúpeľne, WC, spoločenská miestnosť</li>
-            <li>stolný tenis, TV</li>
-            <li>parkovisko vo dvore</li>
-            <li>otvorené ohnisko, drevo, kotlík na varenie</li>
-        </ol>
-        </p>
-        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalADEN">Info</a>
+<!--Karta-->
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="images/img.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Chalupa ADEN</h5>
+            <p class="card-text">
+            <ol>
+                <li>ubytovanie v chalupe Aden v obci Terchová</li>
+                <li>ubytovanie pre jednu skupinu osôb (min.8 - max.15 osôb)</li>
+                <li>päť izieb, kuchyňa, dve kúpeľne, WC, spoločenská miestnosť</li>
+                <li>stolný tenis, TV</li>
+                <li>parkovisko vo dvore</li>
+                <li>otvorené ohnisko, drevo, kotlík na varenie</li>
+            </ol>
+            </p>
+            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalADEN">Info</a>
+        </div>
     </div>
-</div>
 
-<!--Modal-->
-<div id="modalADEN" class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Chalupa ADEN</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p><ul class="izba">
-                <li>jedna štvorposteľová izba</li>
-                <li>jedna trojposteľová izba</li>
-                <li>kuchyňa s TV</li>
-                <li>kúpeľňa</li>
-                <li>WC</li>
-            </ul>
-                <h3>Poschodie</h3>
-                <ul class="izba">
-                    <li>dve trojposteľové izby</li>
-                    <li>jedna dvojposteľová izba</li>
-                    <li>kúpeľňa s WC</li>
-                </ul>
-                <h3>Suterén</h3>
-                <ul class="izba">
-                    <li>spoločenská miestnosť s TV</li>
-                    <li>miestnosť s kozubom a stolným tenisom</li>
-                </ul>       </p>
+    <!--Modal-->
+    <div id="modalADEN" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Chalupa ADEN</h5>
+                </div>
+                <div class="modal-body">
+                    <p>
+<!--                    Cislovany zoznam-->
+                    <ul class="izba">
+                        <li>jedna štvorposteľová izba</li>
+                        <li>jedna trojposteľová izba</li>
+                        <li>kuchyňa s TV</li>
+                        <li>kúpeľňa</li>
+                        <li>WC</li>
+                    </ul>
+                    <h3>Poschodie</h3>
+                    <ul class="izba">
+                        <li>dve trojposteľové izby</li>
+                        <li>jedna dvojposteľová izba</li>
+                        <li>kúpeľňa s WC</li>
+                    </ul>
+                    <h3>Suterén</h3>
+                    <ul class="izba">
+                        <li>spoločenská miestnosť s TV</li>
+                        <li>miestnosť s kozubom a stolným tenisom</li>
+                    </ul>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
+
+    <!--    Alert-->
+    <div class="alert alert-info" role="alert">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque blanditiis doloremque explicabo facilis
+        harum nobis nulla quaerat quam quod, rem, repudiandae. Autem consequatur consequuntur maxime minima, nesciunt
+        sequi similique.
+    </div>
 </div>
+
 
 <!--Päta-->
-    <footer class="text-white">
-        <div class="text-center p-4" style="background-color:#33DAFF">
-            ©Copyright 2022 <br>
-            Maroš Tlacháč <br>
-            Tel: <a href="tel:+421 905 696 666"> +421 905 696 666</a> <br>
-            E-mail: <a href="mailto:marostlachac@gmail.com">marostlachac@gmail.com</a>
-        </div>
-    </footer>
+<footer class="text-white">
+    <div class="text-center p-4" style="background-color:#33DAFF">
+        ©Copyright 2022 <br>
+        Maroš Tlacháč <br>
+        Tel: <a href="tel:+421 905 696 666"> +421 905 696 666</a> <br>
+        E-mail: <a href="mailto:marostlachac@gmail.com">marostlachac@gmail.com</a>
+    </div>
+</footer>
 
 <!--javaScript-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
 </body>
