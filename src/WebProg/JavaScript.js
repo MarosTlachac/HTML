@@ -1,0 +1,1 @@
+<!--1 javascript súbor - 20 riadkov-->
