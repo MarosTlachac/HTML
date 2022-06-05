@@ -3,26 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
-    <link rel="icon" type="image/x-icon" href="images/javascript.ico">
-    <link rel="stylesheet" href="style.css">
+    <title>Hádanky</title>
+    <link rel="icon" type="image/x-icon" href="images/riddle.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        h1 {
+            color: blue;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
     <ul class="nav nav-pills">
         <li class="nav-item">
-            <a class="nav-link" href="index.html">HTML</a>
+            <a class="nav-link" href="index.html">Menu</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="Page1.html">JavaScript</a>
+            <a class="nav-link active" href="Page1.html">Hádanky</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Page2.html">CSS</a>
+            <a class="nav-link" href="Page2.html">Hra s číslami</a>
         </li>
     </ul>
 
-    <span></span>
+    <h1>Hádanky</h1>
+    <p>Veľké uši, dlhý nos, nie som žiadny horenos. Ťažko ma tu spatríte, bývam totiž v Afrike. Kto som?</p>
+    <p class="odpoved" id="odp1" style="display:none">- Slon -</p>
+    <button type="button" onclick="document.getElementById('odp1').style.display='block'">Ukáž odpoveď</button>
+    <button type="button" onclick="document.getElementById('odp1').style.display='none'">Skry odpoveď</button>
+    <hr>
+    <p>Ak je v pravo zelený dom a vľavo modrý dom, kde je biely dom?</p>
+    <p class="odpoved" id="odp2" style="display:none">- V USA vo Washingtone. -</p>
+    <button type="button" onclick="document.getElementById('odp2').style.display='block'">Ukáž odpoveď</button>
+    <button type="button" onclick="document.getElementById('odp2').style.display='none'">Skry odpoveď</button>
+    <hr>
+    <p>Čo je stále pred tebou, ale nemôžeš to vidieť?</p>
+    <p class="odpoved" id="odp3" style="display:none">- Budúcnosť. -</p>
+    <button type="button" onclick="document.getElementById('odp3').style.display='block'">Ukáž odpoveď</button>
+    <button type="button" onclick="document.getElementById('odp3').style.display='none'">Skry odpoveď</button>
+    <hr>
+    <p>Čo sa pokazí skôr, ako ho použijete?</p>
+    <p class="odpoved" id="odp4" style="display:none">- Vajce. -</p>
+    <button type="button" onclick="document.getElementById('odp4').style.display='block'">Ukáž odpoveď</button>
+    <button type="button" onclick="document.getElementById('odp4').style.display='none'" >Skry odpoveď</button>
+    <hr>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"

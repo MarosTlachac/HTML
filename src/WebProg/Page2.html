@@ -3,26 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
-    <link rel="icon" type="image/x-icon" href="images/css.ico">
-    <link rel="stylesheet" href="style.css">
+    <title>Hra s číslami</title>
+    <link rel="icon" type="image/x-icon" href="images/number.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+      body {
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+      h1 {
+          color: blue;
+      }
+      p{
+          font-size: 18px;
+      }
+      p.odpoved {
+          color: red;
+          font-size: 22px;
+      }
+  </style>
 </head>
 <body>
     <ul class="nav nav-pills">
         <li class="nav-item">
-            <a class="nav-link" href="index.html">HTML</a>
+            <a class="nav-link" href="index.html">Menu</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Page1.html">JavaScript</a>
+            <a class="nav-link" href="Page1.html">Hádanky</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="Page2.html">CSS</a>
+            <a class="nav-link active" href="Page2.html">Hra s číslami</a>
         </li>
     </ul>
 
+    <h1>Hra s číslami.</h1>
 
+    <b>Zadal si nasledovné čísla:</b>
+    <p id="zobraz1"></p>
+    <button onclick="myFunction1()">Usporiadaj od najmenšieho čísla</button>
+    <button onclick="myFunction2()">Usporiadaj od najväčšieho čísla</button>
+    <button onclick="myFunction3()">Max číslo</button>
+    <button onclick="myFunction4()">Min číslo</button>
+    <p id="zobraz2"></p>
+
+    <script>
+    let cisla1 = Array(5);
+    let cisla2 = Array(5);
+
+    alert("Zadaj päť čísiel");
+    for (let i = 0; i < 5; i++) {
+      cisla1[i]= prompt("Zadaj "+(i+1)+" cislo:");
+    }
+    cisla2=cisla1;
+    document.getElementById("zobraz1").innerHTML = cisla1;
+
+    function myFunction1() {
+      cisla2.sort(function(a, b){return a - b});
+      document.getElementById("zobraz2").innerHTML = cisla2;
+    }
+    function myFunction2() {
+      cisla2.sort(function(a, b){return b - a});
+      document.getElementById("zobraz2").innerHTML = cisla2;
+    }
+    function myFunction3() {
+      document.getElementById("zobraz2").innerHTML =  Math.max.apply(null, cisla2);
+    }
+    function myFunction4() {
+      document.getElementById("zobraz2").innerHTML =  Math.min.apply(null, cisla2);
+    }
+  </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
