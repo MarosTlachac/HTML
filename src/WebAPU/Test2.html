@@ -34,28 +34,49 @@
         <label><input type="radio" name="q1" value="neutron">Neutron</label><br><br>
 
         <h2>Úloha 2</h2>
-        <p>What is the process of a liquid turning into a gas called?</p>
-        <label><input type="radio" name="q2" value="melting">Melting</label><br>
-        <label><input type="radio" name="q2" value="boiling">Boiling</label><br>
-        <label><input type="radio" name="q2" value="evaporation">Evaporation</label><br><br>
+        <p>What is your favorite color?</p>
+        <input type="text" name="q2"><br>
 
         <h2>Úloha 3</h2>
-        <p>What is the largest planet in our solar system?</p>
-        <label><input type="radio" name="q3" value="Jupiter">Jupiter</label><br>
-        <label><input type="radio" name="q3" value="Saturn">Saturn</label><br>
-        <label><input type="radio" name="q3" value="Uranus">Uranus</label><br><br>
+        <p>What is your favorite color?</p>
+        <input type="text" name="q3"><br>
 
         <h2>Úloha 4</h2>
-        <p>What is the largest planet in our solar system?</p>
-        <label><input type="radio" name="q4" value="Jupiter">Jupiter</label><br>
-        <label><input type="radio" name="q4" value="Saturn">Saturn</label><br>
-        <label><input type="radio" name="q4" value="Uranus">Uranus</label><br><br>
+        <p>What is the process of a liquid turning into a gas called?</p>
+        <label><input type="radio" name="q4" value="melting">Melting</label><br>
+        <label><input type="radio" name="q4" value="boiling">Boiling</label><br>
+        <label><input type="radio" name="q4" value="evaporation">Evaporation</label><br><br>
 
         <h2>Úloha 5</h2>
         <p>What is the largest planet in our solar system?</p>
         <label><input type="radio" name="q5" value="Jupiter">Jupiter</label><br>
         <label><input type="radio" name="q5" value="Saturn">Saturn</label><br>
         <label><input type="radio" name="q5" value="Uranus">Uranus</label><br><br>
+
+        <h2>Úloha 6</h2>
+        <p>What is your favorite color?</p>
+        <input type="text" name="q6"><br>
+
+        <h2>Úloha 7</h2>
+        <p>What is your favorite color?</p>
+        <input type="text" name="q7"><br>
+
+        <h2>Úloha 8</h2>
+        <p>What is the largest planet in our solar system?</p>
+        <label><input type="radio" name="q8" value="Jupiter">Jupiter</label><br>
+        <label><input type="radio" name="q8" value="Saturn">Saturn</label><br>
+        <label><input type="radio" name="q8" value="Uranus">Uranus</label><br><br>
+
+        <h2>Úloha 9</h2>
+        <p>The sun rises in the west and sets in the east. True or False?</p>
+        <label><input type="radio" name="q9" value="true">True</label><br>
+        <label><input type="radio" name="q9" value="false">False</label><br>
+
+        <h2>Úloha 10</h2>
+        <p>What is the largest planet in our solar system?</p>
+        <label><input type="radio" name="q10" value="Jupiter">Jupiter</label><br>
+        <label><input type="radio" name="q10" value="Saturn">Saturn</label><br>
+        <label><input type="radio" name="q10" value="Uranus">Uranus</label><br><br>
 
         <input type="submit" value="Submit">
     </form>
@@ -66,10 +87,15 @@
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             const q1Answer = document.querySelector('input[name="q1"]:checked').value;
-            const q2Answer = document.querySelector('input[name="q2"]:checked').value;
-            const q3Answer = document.querySelector('input[name="q3"]:checked').value;
+            const q2Answer = document.getElementById("q2").value.trim().toLowerCase();
+            const q3Answer = document.getElementById("q3").value.trim().toLowerCase();
             const q4Answer = document.querySelector('input[name="q4"]:checked').value;
             const q5Answer = document.querySelector('input[name="q5"]:checked').value;
+            const q6Answer = document.getElementById("q6").value.trim().toLowerCase();
+            const q7Answer = document.getElementById("q7").value.trim().toLowerCase();
+            const q8Answer = document.querySelector('input[name="q8"]:checked').value;
+            const q9Answer = document.querySelector('input[name="q9"]:checked').value;
+            const q10Answer = document.querySelector('input[name="q10"]:checked').value;
             let score = 0;
             if (q1Answer === "electron") {
                 score++;
@@ -86,8 +112,23 @@
             if (q5Answer === "Jupiter") {
                 score++;
             }
+            if (q6Answer === "penis") {
+                score++;
+            }
+            if (q7Answer === "electron") {
+                score++;
+            }
+            if (q8Answer === "electron") {
+                score++;
+            }
+            if (q9Answer === "electron") {
+                score++;
+            }
+            if (q10Answer === "electron") {
+                score++;
+            }
             let feedback = document.querySelector('#feedback');
-            if (score === 5) {
+            if (score === 10) {
                 feedback.textContent = "Congratulations, you got all 3 questions correct!";
             } else {
                 feedback.textContent = "You got " + score + " out of 3 questions correct. Please try again.";
