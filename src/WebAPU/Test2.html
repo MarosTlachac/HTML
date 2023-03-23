@@ -15,9 +15,6 @@
 <body>
     <ul class="nav nav-pills">
         <li class="nav-item">
-            <a class="nav-link" href="index.html">Menu</a>
-        </li>
-        <li class="nav-item">
             <a class="nav-link" href="Test1.html">Test1</a>
         </li>
         <li class="nav-item">
@@ -28,37 +25,37 @@
     <h1>Test 2</h1>
     <form>
         <h2>Úloha 1</h2>
-        <p>What is the smallest particle in an element called?</p>
-        <label><input type="radio" name="q1" value="proton">Proton</label><br>
-        <label><input type="radio" name="q1" value="electron">Electron</label><br>
-        <label><input type="radio" name="q1" value="neutron">Neutron</label><br><br>
+        <p>Doklady rozdeľujeme na:</p>
+        <label><input type="radio" name="q1" value="interné/externé">interné/externé</label><br>
+        <label><input type="radio" name="q1" value="vlastné/cudzie">vlastné/cudzie</label><br>
+        <label><input type="radio" name="q1" value="staré/nové">staré/nové</label><br><br>
 
         <h2>Úloha 2</h2>
-        <p>Koľko účtovných tried existuje?</p>
-        <input type="text" name="q2"><br>
+        <p>Aký účet má číslo 562?</p>
+        <input type="text" name="q2"><br><br>
 
         <h2>Úloha 3</h2>
-        <p>What is the largest planet in our solar system?</p>
-        <label><input type="radio" name="q3" value="Jupiter">Jupiter</label><br>
-        <label><input type="radio" name="q3" value="Saturn">Saturn</label><br>
-        <label><input type="radio" name="q3" value="Uranus">Uranus</label><br><br>
+        <p>Aký doklad slúži na zaradenie majetku do užívania?</p>
+        <label><input type="radio" name="q3" value="ZAZ">ZAZ</label><br>
+        <label><input type="radio" name="q3" value="ZAV">ZAV</label><br>
+        <label><input type="radio" name="q3" value="HBU">HBU</label><br><br>
 
         <h2>Úloha 4</h2>
-        <p>What is your favorite color?</p>
-        <input type="text" name="q4"><br>
+        <p>Čo znamená skratka VPD?</p>
+        <input type="text" name="q4"><br><br>
 
         <h2>Úloha 5</h2>
-        <p>What is the largest planet in our solar system?</p>
-        <label><input type="radio" name="q5" value="Jupiter">Jupiter</label><br>
-        <label><input type="radio" name="q5" value="Saturn">Saturn</label><br>
-        <label><input type="radio" name="q5" value="Uranus">Uranus</label><br><br>
+        <p>Medzi súvahový účet patrí:</p>
+        <label><input type="radio" name="q5" value="Zúčtovacie vzťahy">Zúčtovacie vzťahy</label><br>
+        <label><input type="radio" name="q5" value="Nálady">Nálady</label><br>
+        <label><input type="radio" name="q5" value="Výnosy">Výnosy</label><br><br>
 
         <h2>Úloha 6</h2>
-        <p>The sun rises in the west and sets in the east. True or False?</p>
-        <label><input type="radio" name="q6" value="true">True</label><br>
-        <label><input type="radio" name="q6" value="false">False</label><br>
+        <p>Musí byť doklad čitateľný?</p>
+        <label><input type="radio" name="q6" value="true">Áno</label><br>
+        <label><input type="radio" name="q6" value="false">Nie</label><br><br>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Vyhodnotiť">
     </form>
     <div id="feedback"></div>
 
@@ -73,29 +70,29 @@
             const q5Answer = document.querySelector('input[name="q5"]:checked').value;
             const q6Answer = document.querySelector('input[name="q6"]:checked').value;
             let score = 0;
-            if (q1Answer === "electron") {
+            if (q1Answer === "interné/externé") {
                 score++;
             }
-            if (q2Answer === "10") {
+            if (q2Answer === "úroky") {
                 score++;
             }
-            if (q3Answer === "Jupiter") {
+            if (q3Answer === "ZAZ") {
                 score++;
             }
-            if (q4Answer === "Jupiter") {
+            if (q4Answer === "výdavkový pokladničný doklad") {
                 score++;
             }
-            if (q5Answer === "Jupiter") {
+            if (q5Answer === "Zúčtovacie vzťahy") {
                 score++;
             }
-            if (q6Answer === "penis") {
+            if (q6Answer === "true") {
                 score++;
             }
             let feedback = document.querySelector('#feedback');
             if (score === 6) {
-                feedback.textContent = "Congratulations, you got all 3 questions correct!";
+                feedback.textContent = "Gratulujem, všetky tvoje odpovede sú správne!";
             } else {
-                feedback.textContent = "You got " + score + " out of 3 questions correct. Please try again.";
+                feedback.textContent = "Nadobudol si " + score + " bodov.";
             }
         });
     </script>
